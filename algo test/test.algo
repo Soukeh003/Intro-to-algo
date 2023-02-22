@@ -1,0 +1,22 @@
+ALGORITHM algotest(sentence)
+VAR
+    count_char, count_vawels, count_words :
+    tab : ARRAY_OF CHAR[5];
+BEGIN
+    tab["a", "e", "i", "o", "u" ]
+
+    WHILE (sentence[count_char] <> ".") DO
+        IF (sentence[count_char] == " ") THEN
+            count_words++
+        END_IF
+        IF (sentence[count_char] in tab) THEN
+            count_vawels++
+        END_IF
+
+        count_char++
+
+    END_WHILE
+    Write("Number of words", count_words+1)
+    Write("Number of char", count_char+1)
+    Write("Number of vawels", count_vawels+1)
+END
